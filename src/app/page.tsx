@@ -21,6 +21,11 @@ export default function Home() {
           <p className="lede">
             Pick your state or union territory, then join its group on Arattai.
           </p>
+          <div className="hero-stats">
+            <span className="hero-stat"><b>{GROUPS.length}</b> groups</span>
+            <span className="hero-stat"><b>{GROUPS.filter((g) => g.category === "state").length}</b> states</span>
+            <span className="hero-stat"><b>{GROUPS.filter((g) => g.category === "ut").length}</b> union territories</span>
+          </div>
         </div>
       </header>
 
