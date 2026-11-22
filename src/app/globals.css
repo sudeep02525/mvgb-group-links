@@ -436,3 +436,8 @@ button, input { font: inherit; color: inherit; }
 .plate[data-photo="true"] { border-radius: 18px; background: #fff; box-shadow: 0 0 0 1px var(--line), 0 10px 20px -10px rgba(11, 20, 51, 0.5); }
 .plate[data-photo="true"] img { object-fit: contain; border-radius: 0; }
 .row .plate[data-photo="true"] { width: 76px; height: 76px; }
+
+/* footer: gradient only on the Hindi text, flag drawn separately */
+.jai { display: flex; align-items: center; justify-content: center; gap: 12px; background: none; color: inherit; -webkit-background-clip: border-box; background-clip: border-box; }
+.jai-text { line-height: 1.5; padding: 0.08em 0.05em; background: linear-gradient(90deg, #ff9933, #b8b8c8 50%, #2fb31f); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.jai-flag { width: 40px; height: 27px; border-radius: 4px; box-shadow: 0 0 0 1px rgba(128, 128, 160, 0.4), 0 6px 14px -6px rgba(0, 0, 0, 0.5); }

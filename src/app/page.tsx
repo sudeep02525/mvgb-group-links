@@ -68,7 +68,16 @@ export default function Home() {
 
       <footer className="footer">
         <div className="container">
-          <p className="jai" lang="hi">जय हिन्द 🇮🇳</p>
+          <p className="jai">
+            <span className="jai-text" lang="hi">जय हिन्द</span>
+            <svg className="jai-flag" viewBox="0 0 36 24" aria-hidden="true">
+              <rect width="36" height="8" fill="#ff9933" />
+              <rect y="8" width="36" height="8" fill="#ffffff" />
+              <rect y="16" width="36" height="8" fill="#138808" />
+              <circle cx="18" cy="12" r="3.2" fill="none" stroke="#000080" strokeWidth="0.7" />
+              <circle cx="18" cy="12" r="0.5" fill="#000080" />
+            </svg>
+          </p>
           <p>Anyone with a link can join, so share these only with people you trust.</p>
           <p className="footer-count">{GROUPS.length} groups in the M.V.G.B. directory.</p>
         </div>
