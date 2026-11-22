@@ -4,6 +4,8 @@ export interface Group {
   /** Position in the original list (#1–#38). */
   id: number;
   category: Category;
+  /** Optional group photo, e.g. "/groups/wb.webp". The code plate is used when missing. */
+  image?: string;
   /** Short code shown on the plate. */
   code: string;
   /** Clean display name. */
@@ -34,6 +36,7 @@ export const GROUPS: Group[] = [
     id: 2,
     category: "community",
     code: "IN",
+    image: "/groups/in.webp",
     name: "Mission Vishwaguru Bharat",
     native: "मिशन विश्वगुरु भारत",
     nativeLang: "hi",
@@ -45,6 +48,7 @@ export const GROUPS: Group[] = [
     id: 1,
     category: "community",
     code: "SA",
+    image: "/groups/sa.webp",
     name: "Swadeshi Apps Community",
     groupName: "Swadeshi Apps Community",
     link: "https://chat.arattai.in/groups/z43545f313237383637323136383233343539373235345f35363030372d47437c3031303032313133343033383137363830363133363334313330",
@@ -340,6 +344,7 @@ export const GROUPS: Group[] = [
     id: 4,
     category: "state",
     code: "WB",
+    image: "/groups/wb.webp",
     name: "West Bengal",
     native: "পশ্চিমবঙ্গ",
     nativeLang: "bn",

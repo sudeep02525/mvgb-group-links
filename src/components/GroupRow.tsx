@@ -10,8 +10,18 @@ interface Props {
 
 export function Plate({ group }: { group: Group }) {
   return (
-    <span className="plate" data-category={group.category} aria-hidden="true">
-      {group.code}
+    <span
+      className="plate"
+      data-category={group.category}
+      data-photo={group.image ? "true" : undefined}
+      aria-hidden="true"
+    >
+      {group.image ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={group.image} alt="" loading="lazy" width={64} height={64} />
+      ) : (
+        group.code
+      )}
     </span>
   );
 }
