@@ -415,3 +415,14 @@ button, input { font: inherit; color: inherit; }
   .marquee { padding-bottom: 44px; }
 }
 @media (prefers-reduced-motion: reduce) { .chakra, .title-hi, .marquee-track { animation: none !important; } }
+
+/* fix: Devanagari matras were clipped by background-clip:text */
+.title-hi {
+  line-height: 1.45;
+  padding: 0.14em 0.08em 0.18em;
+  margin: -0.14em -0.08em -0.18em;
+  display: block;
+  overflow: visible;
+}
+.title { margin-top: 44px; }
+.lede { line-height: 1.7; }
