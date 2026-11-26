@@ -13,6 +13,7 @@ const FILTERS = [
   { value: "channel", label: "Channel" },
   { value: "community", label: "Community" },
   { value: "state", label: "States" },
+  { value: "gurukul", label: "गुरुकुल" },
   { value: "ut", label: "Union territories" },
 ];
 

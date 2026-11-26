@@ -32,7 +32,7 @@ export function search(index, query) {
 }
 
 export function countByCategory(groups) {
-  const counts = { channel: 0, community: 0, state: 0, ut: 0 };
+  const counts = { channel: 0, community: 0, state: 0, gurukul: 0, ut: 0 };
   for (const group of groups) counts[group.category] += 1;
   return counts;
 }
