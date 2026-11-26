@@ -33,6 +33,18 @@ export const CATEGORY_ORDER: Category[] = ["community", "state", "ut"];
 /** Sorted: community groups first, then states A–Z, then union territories A–Z. */
 export const GROUPS: Group[] = [
   {
+    id: 39,
+    category: "community",
+    code: "CH",
+    image: "/groups/ch.webp",
+    name: "Mission Vishwaguru Bharat Channel",
+    native: "मिशन विश्वगुरु भारत🇮🇳 & मिशन स्वदेशी भारत",
+    nativeLang: "hi",
+    groupName: "मिशन विश्वगुरु भारत🇮🇳 & मिशन स्वदेशी भारत",
+    link: "https://aratt.ai/@MissionVishwaGuruBharat",
+    keywords: "channel main channel मिशन विश्वगुरु भारत मिशन स्वदेशी भारत mission vishwaguru bharat mission swadeshi bharat mvgb official",
+  },
+  {
     id: 2,
     category: "community",
     code: "IN",
