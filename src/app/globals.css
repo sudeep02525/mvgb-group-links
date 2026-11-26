@@ -442,5 +442,5 @@ button, input { font: inherit; color: inherit; }
 .jai-text { line-height: 1.5; padding: 0.08em 0.05em; background: linear-gradient(90deg, #ff9933, #b8b8c8 50%, #2fb31f); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .jai-flag { width: 40px; height: 27px; border-radius: 4px; box-shadow: 0 0 0 1px rgba(128, 128, 160, 0.4), 0 6px 14px -6px rgba(0, 0, 0, 0.5); }
 
-/* channel section looks like community (saffron) */
-.plate[data-category="channel"] { background: linear-gradient(135deg, #ffb04d, #ff7a00); color: #1a1000; }
+/* channel code plate looks like community (saffron); the channel photo keeps the same white badge as the other logos */
+.plate[data-category="channel"]:not([data-photo="true"]) { background: linear-gradient(135deg, #ffb04d, #ff7a00); color: #1a1000; }
