@@ -1,6 +1,6 @@
 # M.V.G.B. Group Links
 
-Directory of the Mission Vishwaguru Bharat Arattai groups (38 links: 2 community groups, 28 states, 8 union territories). Built with Next.js (App Router) and TypeScript.
+Directory of the Mission Vishwaguru Bharat Arattai groups (38 links: 2 community groups, 28 states, 8 union territories). Built with Next.js (App Router) and JavaScript.
 
 ## Run it
 
@@ -26,7 +26,7 @@ npm start
 
 ## Edit the data
 
-All groups live in `src/data/groups.ts`. To add or change one, edit its entry:
+All groups live in `src/data/groups.js`. To add or change one, edit its entry:
 
 | Field | Meaning |
 | --- | --- |
@@ -49,6 +49,6 @@ Anyone with an invite link can join these groups. The page sets `noindex` so sea
 src/
   app/          layout, page, global styles, favicon
   components/   GroupDirectory (search + filters), GroupRow, QrDialog, ThemeToggle
-  data/         groups.ts
-  lib/          search.ts, clipboard.ts
+  data/         groups.js
+  lib/          search.js, clipboard.js
 ```

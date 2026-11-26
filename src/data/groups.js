@@ -1,38 +1,35 @@
-export type Category = "channel" | "community" | "state" | "ut";
+/**
+ * @typedef {"channel" | "community" | "state" | "ut"} Category
+ *
+ * @typedef {Object} Group
+ * @property {number} id              Position in the original list (#1-#38).
+ * @property {Category} category
+ * @property {string} [image]         Optional group photo, e.g. "/groups/wb.webp". The code plate is used when missing.
+ * @property {string} code            Short code shown on the plate.
+ * @property {string} name            Clean display name.
+ * @property {string} [native]        Name in the local script, when the original group name had one.
+ * @property {string} [nativeLang]    BCP-47 language tag for `native`, so the browser picks the right font.
+ * @property {string} groupName       Exact group name as it appears in Arattai.
+ * @property {string} link            Arattai invite link.
+ * @property {string} keywords        Lowercase search terms: aliases, spellings, short codes.
+ */
 
-export interface Group {
-  /** Position in the original list (#1–#38). */
-  id: number;
-  category: Category;
-  /** Optional group photo, e.g. "/groups/wb.webp". The code plate is used when missing. */
-  image?: string;
-  /** Short code shown on the plate. */
-  code: string;
-  /** Clean display name. */
-  name: string;
-  /** Name in the local script, when the original group name had one. */
-  native?: string;
-  /** BCP-47 language tag for `native`, so the browser picks the right font. */
-  nativeLang?: string;
-  /** Exact group name as it appears in Arattai. */
-  groupName: string;
-  /** Arattai invite link. */
-  link: string;
-  /** Lowercase search terms: aliases, spellings, short codes. */
-  keywords: string;
-}
-
-export const CATEGORY_LABELS: Record<Category, string> = {
+/** @type {Record<Category, string>} */
+export const CATEGORY_LABELS = {
   channel: "Channel",
   community: "Community groups",
   state: "States",
   ut: "Union territories",
 };
 
-export const CATEGORY_ORDER: Category[] = ["channel", "community", "state", "ut"];
+/** @type {Category[]} */
+export const CATEGORY_ORDER = ["channel", "community", "state", "ut"];
 
-/** Sorted: channel first, then community groups, then states A–Z, then union territories A–Z. */
-export const GROUPS: Group[] = [
+/**
+ * Sorted: channel first, then community groups, then states A–Z, then union territories A–Z.
+ * @type {Group[]}
+ */
+export const GROUPS = [
   {
     id: 39,
     category: "channel",

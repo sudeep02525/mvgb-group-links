@@ -1,5 +1,3 @@
-import type { Metadata, Viewport } from "next";
-import type { ReactNode } from "react";
 import "@fontsource-variable/archivo/wdth.css";
 import "@fontsource/hind/400.css";
 import "@fontsource/hind/500.css";
@@ -7,7 +5,7 @@ import "@fontsource/hind/600.css";
 import "@fontsource/hind/700.css";
 import "./globals.css";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "M.V.G.B. Group Links",
   description:
     "Find and join the Mission Vishwaguru Bharat group for your state or union territory on Arattai.",
@@ -15,7 +13,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export const viewport: Viewport = {
+export const viewport = {
   themeColor: "#0e1a3a",
   colorScheme: "light dark",
 };
@@ -23,7 +21,7 @@ export const viewport: Viewport = {
 // Runs before first paint so the saved theme never flashes the wrong colours.
 const themeScript = `(function(){try{var t=localStorage.getItem("mvgb-theme");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t}catch(e){}})();`;
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>

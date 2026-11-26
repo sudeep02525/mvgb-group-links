@@ -2,19 +2,11 @@
 
 import { QRCodeSVG } from "qrcode.react";
 import { useEffect, useRef, useState } from "react";
-import type { Group } from "@/data/groups";
 import { Plate } from "./GroupRow";
 import { CheckIcon, CloseIcon, CopyIcon, ExternalIcon, ShareIcon } from "./Icons";
 
-interface Props {
-  group: Group | null;
-  copied: boolean;
-  onCopy: (group: Group) => void;
-  onClose: () => void;
-}
-
-export default function QrDialog({ group, copied, onCopy, onClose }: Props) {
-  const ref = useRef<HTMLDialogElement>(null);
+export default function QrDialog({ group, copied, onCopy, onClose }) {
+  const ref = useRef(null);
   const [canShare, setCanShare] = useState(false);
 
   useEffect(() => {

@@ -1,5 +1,9 @@
-/** Copies text to the clipboard. Falls back to a hidden textarea for older or non-secure contexts. */
-export async function copyText(text: string): Promise<boolean> {
+/**
+ * Copies text to the clipboard. Falls back to a hidden textarea for older or non-secure contexts.
+ * @param {string} text
+ * @returns {Promise<boolean>}
+ */
+export async function copyText(text) {
   try {
     if (navigator.clipboard?.writeText) {
       await navigator.clipboard.writeText(text);

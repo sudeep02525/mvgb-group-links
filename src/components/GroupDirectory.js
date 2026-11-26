@@ -1,21 +1,14 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import {
-  CATEGORY_LABELS,
-  CATEGORY_ORDER,
-  type Category,
-  type Group,
-} from "@/data/groups";
+import { CATEGORY_LABELS, CATEGORY_ORDER } from "@/data/groups";
 import { copyText } from "@/lib/clipboard";
 import { buildIndex, countByCategory, search } from "@/lib/search";
 import GroupRow from "./GroupRow";
 import { CloseIcon, InfoIcon, SearchIcon } from "./Icons";
 import QrDialog from "./QrDialog";
 
-type Filter = "all" | Category;
-
-const FILTERS: { value: Filter; label: string }[] = [
+const FILTERS = [
   { value: "all", label: "All" },
   { value: "channel", label: "Channel" },
   { value: "community", label: "Community" },
@@ -23,16 +16,16 @@ const FILTERS: { value: Filter; label: string }[] = [
   { value: "ut", label: "Union territories" },
 ];
 
-export default function GroupDirectory({ groups }: { groups: Group[] }) {
+export default function GroupDirectory({ groups }) {
   const [query, setQuery] = useState("");
-  const [filter, setFilter] = useState<Filter>("all");
-  const [qrGroup, setQrGroup] = useState<Group | null>(null);
-  const [copiedId, setCopiedId] = useState<number | null>(null);
+  const [filter, setFilter] = useState("all");
+  const [qrGroup, setQrGroup] = useState(null);
+  const [copiedId, setCopiedId] = useState(null);
   const [toast, setToast] = useState("");
 
-  const inputRef = useRef<HTMLInputElement>(null);
-  const copiedTimer = useRef<number | undefined>(undefined);
-  const toastTimer = useRef<number | undefined>(undefined);
+  const inputRef = useRef(null);
+  const copiedTimer = useRef(undefined);
+  const toastTimer = useRef(undefined);
 
   const index = useMemo(() => buildIndex(groups), [groups]);
   const matched = useMemo(() => search(index, query), [index, query]);
@@ -46,14 +39,14 @@ export default function GroupDirectory({ groups }: { groups: Group[] }) {
     items: visible.filter((g) => g.category === category),
   })).filter((section) => section.items.length > 0);
 
-  const showToast = useCallback((message: string) => {
+  const showToast = useCallback((message) => {
     window.clearTimeout(toastTimer.current);
     setToast(message);
     toastTimer.current = window.setTimeout(() => setToast(""), 2200);
   }, []);
 
   const handleCopy = useCallback(
-    async (group: Group) => {
+    async (group) => {
       const ok = await copyText(group.link);
       window.clearTimeout(copiedTimer.current);
       if (ok) {
@@ -69,9 +62,9 @@ export default function GroupDirectory({ groups }: { groups: Group[] }) {
 
   // "/" jumps to search, like most directory sites
   useEffect(() => {
-    function onKeyDown(event: KeyboardEvent) {
+    function onKeyDown(event) {
       if (event.key !== "/" || event.metaKey || event.ctrlKey || event.altKey) return;
-      const target = event.target as HTMLElement | null;
+      const target = event.target;
       const typing =
         target?.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(target?.tagName ?? "");
       if (typing) return;

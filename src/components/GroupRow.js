@@ -1,14 +1,6 @@
-import type { Group } from "@/data/groups";
 import { CheckIcon, CopyIcon, QrIcon } from "./Icons";
 
-interface Props {
-  group: Group;
-  copied: boolean;
-  onCopy: (group: Group) => void;
-  onShowQr: (group: Group) => void;
-}
-
-export function Plate({ group }: { group: Group }) {
+export function Plate({ group }) {
   return (
     <span
       className="plate"
@@ -26,7 +18,7 @@ export function Plate({ group }: { group: Group }) {
   );
 }
 
-export default function GroupRow({ group, copied, onCopy, onShowQr }: Props) {
+export default function GroupRow({ group, copied, onCopy, onShowQr }) {
   return (
     <li className="row">
       <Plate group={group} />
