@@ -39,7 +39,7 @@ export function search(index: SearchIndexEntry[], query: string): Group[] {
 }
 
 export function countByCategory(groups: Group[]): Record<Category, number> {
-  const counts: Record<Category, number> = { channel: 0, community: 0, state: 0, ut: 0 };
+  const counts: Record<Category, number> = { channel: 0, community: 0, state: 0, gurukul: 0, ut: 0 };
   for (const group of groups) counts[group.category] += 1;
   return counts;
 }

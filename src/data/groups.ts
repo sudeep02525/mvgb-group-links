@@ -1,4 +1,4 @@
-export type Category = "channel" | "community" | "state" | "ut";
+export type Category = "channel" | "community" | "state" | "gurukul" | "ut";
 
 export interface Group {
   /** Position in the original list (#1–#38). */
@@ -26,10 +26,11 @@ export const CATEGORY_LABELS: Record<Category, string> = {
   channel: "Channel",
   community: "Community groups",
   state: "States",
+  gurukul: "गुरुकुल",
   ut: "Union territories",
 };
 
-export const CATEGORY_ORDER: Category[] = ["channel", "community", "state", "ut"];
+export const CATEGORY_ORDER: Category[] = ["channel", "community", "state", "gurukul", "ut"];
 
 /** Sorted: channel first, then community groups, then states A–Z, then union territories A–Z. */
 export const GROUPS: Group[] = [
@@ -368,6 +369,16 @@ export const GROUPS: Group[] = [
     groupName: "M.V.G.B. -U.T.(उत्तराखंड)",
     link: "https://chat.arattai.in/groups/i43545f313436333230323232363239323434393636315f333330303234362d47437c3031303032313133333231353137393532383234393030373630",
     keywords: "m.v.g.b. -u.t.(उत्तराखंड) uttarakhand uttaranchal ut uk",
+  },
+  {
+    id: 40,
+    category: "gurukul",
+    code: "GK",
+    name: "गुरुकुल",
+    nativeLang: "hi",
+    groupName: "गुरुकुल",
+    link: "https://chat.arattai.in/groups/l43545f313238373530333432303333393831343736345f393232323235362d47437c3031303131353032353130313137353933303736333633353230",
+    keywords: "gurukul गुरुकुल gurukool gurukula gk",
   },
   {
     id: 20,
