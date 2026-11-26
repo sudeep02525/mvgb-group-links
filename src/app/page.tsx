@@ -19,7 +19,7 @@ function Chakra() {
 }
 
 export default function Home() {
-  const names = GROUPS.filter((g) => g.category !== "community").map((g) => g.name);
+  const names = GROUPS.filter((g) => g.category === "state" || g.category === "ut").map((g) => g.name);
   const states = GROUPS.filter((g) => g.category === "state").length;
   const uts = GROUPS.filter((g) => g.category === "ut").length;
 
@@ -46,7 +46,7 @@ export default function Home() {
             Pick your state or union territory, then join its group on Arattai.
           </p>
           <div className="hero-stats">
-            <span className="hero-stat"><b>{GROUPS.length}</b> groups</span>
+            <span className="hero-stat"><b>{GROUPS.filter((g) => g.category !== "channel").length}</b> groups</span>
             <span className="hero-stat"><b>{states}</b> states</span>
             <span className="hero-stat"><b>{uts}</b> union territories</span>
           </div>
@@ -79,7 +79,7 @@ export default function Home() {
             </svg>
           </p>
           <p>Anyone with a link can join, so share these only with people you trust.</p>
-          <p className="footer-count">{GROUPS.length} groups in the M.V.G.B. directory.</p>
+          <p className="footer-count">{GROUPS.filter((g) => g.category !== "channel").length} groups and 1 channel in the M.V.G.B. directory.</p>
         </div>
       </footer>
     </>

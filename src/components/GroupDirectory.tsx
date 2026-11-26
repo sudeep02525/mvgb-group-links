@@ -17,6 +17,7 @@ type Filter = "all" | Category;
 
 const FILTERS: { value: Filter; label: string }[] = [
   { value: "all", label: "All" },
+  { value: "channel", label: "Channel" },
   { value: "community", label: "Community" },
   { value: "state", label: "States" },
   { value: "ut", label: "Union territories" },
@@ -81,10 +82,11 @@ export default function GroupDirectory({ groups }: { groups: Group[] }) {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
+  const groupTotal = groups.filter((g) => g.category !== "channel").length;
   const isFiltering = query.trim() !== "" || filter !== "all";
   const summary = isFiltering
-    ? `Showing ${visible.length} of ${groups.length} groups`
-    : `${groups.length} groups`;
+    ? `Showing ${visible.filter((g) => g.category !== "channel").length} of ${groupTotal} groups`
+    : `${groupTotal} groups`;
 
   return (
     <>

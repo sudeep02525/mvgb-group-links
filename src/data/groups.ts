@@ -1,4 +1,4 @@
-export type Category = "community" | "state" | "ut";
+export type Category = "channel" | "community" | "state" | "ut";
 
 export interface Group {
   /** Position in the original list (#1–#38). */
@@ -23,18 +23,19 @@ export interface Group {
 }
 
 export const CATEGORY_LABELS: Record<Category, string> = {
+  channel: "Channel",
   community: "Community groups",
   state: "States",
   ut: "Union territories",
 };
 
-export const CATEGORY_ORDER: Category[] = ["community", "state", "ut"];
+export const CATEGORY_ORDER: Category[] = ["channel", "community", "state", "ut"];
 
-/** Sorted: community groups first, then states A–Z, then union territories A–Z. */
+/** Sorted: channel first, then community groups, then states A–Z, then union territories A–Z. */
 export const GROUPS: Group[] = [
   {
     id: 39,
-    category: "community",
+    category: "channel",
     code: "CH",
     image: "/groups/ch.webp",
     name: "Mission Vishwaguru Bharat Channel",
