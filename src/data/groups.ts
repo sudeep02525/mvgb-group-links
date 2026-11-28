@@ -30,7 +30,7 @@ export const CATEGORY_LABELS: Record<Category, string> = {
   ut: "Union territories",
 };
 
-export const CATEGORY_ORDER: Category[] = ["channel", "community", "state", "gurukul", "ut"];
+export const CATEGORY_ORDER: Category[] = ["channel", "community", "state", "ut", "gurukul"];
 
 /** Sorted: channel first, then community groups, then states A–Z, then union territories A–Z. */
 export const GROUPS: Group[] = [

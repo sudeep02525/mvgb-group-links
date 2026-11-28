@@ -20,8 +20,8 @@ const FILTERS: { value: Filter; label: string }[] = [
   { value: "channel", label: "Channel" },
   { value: "community", label: "Community" },
   { value: "state", label: "States" },
-  { value: "gurukul", label: "गुरुकुल" },
   { value: "ut", label: "Union territories" },
+  { value: "gurukul", label: "गुरुकुल" },
 ];
 
 export default function GroupDirectory({ groups }: { groups: Group[] }) {
