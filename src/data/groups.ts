@@ -47,6 +47,18 @@ export const GROUPS: Group[] = [
     keywords: "channel main channel मिशन विश्वगुरु भारत मिशन स्वदेशी भारत mission vishwaguru bharat mission swadeshi bharat mvgb official",
   },
   {
+    id: 41,
+    category: "channel",
+    code: "WB",
+    image: "/groups/wb-channel.webp",
+    name: "Paschim Banga Channel",
+    native: "পশ্চিমবঙ্গ",
+    nativeLang: "bn",
+    groupName: "পশ্চিমবঙ্গ",
+    link: "https://aratt.ai/@PaschimBangal",
+    keywords: "channel paschim banga bangal west bengal wb bangla পশ্চিমবঙ্গ",
+  },
+  {
     id: 2,
     category: "community",
     code: "IN",

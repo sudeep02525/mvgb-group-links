@@ -1,6 +1,6 @@
 # M.V.G.B. Group Links
 
-Directory of the Mission Vishwaguru Bharat Arattai groups (40 links: 1 channel, 2 community groups, 28 states, 8 union territories, 1 Gurukul group). Built with Next.js (App Router) and TypeScript.
+Directory of the Mission Vishwaguru Bharat Arattai groups (41 links: 2 channels, 2 community groups, 28 states, 8 union territories, 1 Gurukul group). Built with Next.js (App Router) and TypeScript.
 
 ## Run it
 

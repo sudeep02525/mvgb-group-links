@@ -79,7 +79,7 @@ export default function Home() {
             </svg>
           </p>
           <p>Anyone with a link can join, so share these only with people you trust.</p>
-          <p className="footer-count">{GROUPS.filter((g) => g.category !== "channel").length} groups and 1 channel in the M.V.G.B. directory.</p>
+          <p className="footer-count">{GROUPS.filter((g) => g.category !== "channel").length} groups and {GROUPS.filter((g) => g.category === "channel").length} channels in the M.V.G.B. directory.</p>
         </div>
       </footer>
     </>
