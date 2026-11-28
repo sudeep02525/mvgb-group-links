@@ -202,11 +202,12 @@ export const GROUPS: Group[] = [
     id: 30,
     category: "state",
     code: "MP",
+    image: "/groups/mp.webp",
     name: "Madhya Pradesh",
     native: "मध्य प्रदेश",
     nativeLang: "hi",
     groupName: "M.V.G.B. -M.P.(मध्य प्रदेश)",
-    link: "https://chat.arattai.in/groups/i43545f313436333230323230303835383536343132375f32303033313536323137382d47437c3031303032313133333230313137393033333031313038303430",
+    link: "https://chat.arattai.in/groups/q43545f313436333230323234353539383936333532335f32303033313536323137382d47437c3031303032313133333031363137393538333137383035363630",
     keywords: "m.v.g.b. -m.p.(मध्य प्रदेश) madhya pradesh mp",
   },
   {
